@@ -78,5 +78,6 @@ curl http://127.0.0.01:5000/Sunnyvale
 ##### when you type in city name(ex:Sunnyvale) after 5000/, you will the below result:
 ![image](https://user-images.githubusercontent.com/112602900/217963677-39d5cdac-a4cb-49b3-905f-4940d98f8199.png)
 
-
+##### Testing on the browser, when you type in city name(ex:New York) after 5000/, you will the below result:
+![image](https://user-images.githubusercontent.com/112602900/217964717-b69aafab-e0b3-4fe6-a6bb-f8dca09480b0.png)
 
