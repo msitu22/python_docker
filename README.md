@@ -47,14 +47,14 @@ docker build -t python-docker .
 cd sv2
 docker build -t python-docker-2 .
 `
-#### when running docker images you should see the two images:
+##### when running docker images you should see the two images:
 ![image](https://user-images.githubusercontent.com/112602900/217962562-82f0a436-805f-455b-b39a-fe5ae1480fc8.png)
 
 #### 8 . Setup Docker Network:
 `
 docker network create cdb-net
 `
-#### when running docker network inspect cdb-net you should see below:
+##### when running docker network inspect cdb-net you should see below:
 ![image](https://user-images.githubusercontent.com/112602900/217963264-fc51dd95-09b0-4828-8784-51c92005b6bc.png)
 
 ## Connect 2 Microservices:
@@ -68,14 +68,14 @@ docker run -p 5000:5000 --network=cdb-net --name container python-docker
 cd sv2
 docker run -p 3000:3000 --network=cdb-net --name container2 python-docker-2 
 `
-#### when running docker network inspect cdb-net now, you should the 2 services containers have been added in the same network:
+##### when running docker network inspect cdb-net now, you should see the 2 services containers have been added in the same network:
 ![image](https://user-images.githubusercontent.com/112602900/217963447-46e7713d-9352-48ad-8d4a-06d10df4b7a4.png)
 
 #### 11 . Verify Docker containers can communicate
 `
 curl http://127.0.0.01:5000/Sunnyvale
 `
-#### when you type in city name(ex:Sunnyvale) after 5000/, you will the below result:
+##### when you type in city name(ex:Sunnyvale) after 5000/, you will the below result:
 ![image](https://user-images.githubusercontent.com/112602900/217963677-39d5cdac-a4cb-49b3-905f-4940d98f8199.png)
 
 
