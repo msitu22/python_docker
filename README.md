@@ -57,7 +57,6 @@ docker network create cdb-net
 #### when running docker network inspect cdb-net you should see below:
 ![image](https://user-images.githubusercontent.com/112602900/217963264-fc51dd95-09b0-4828-8784-51c92005b6bc.png)
 
-----------------------------------------------------------------
 ## Connect 2 Microservices:
 #### 9 . Add Docker service 1 Container in the Docker Network cdb-net and run the container:
 `
