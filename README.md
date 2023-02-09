@@ -68,7 +68,7 @@ docker run -p 5000:5000 --network=cdb-net --name container python-docker
 cd sv2
 docker run -p 3000:3000 --network=cdb-net --name container2 python-docker-2 
 `
-##### when running docker network inspect cdb-net now, you should see the 2 services containers have been added in the same network:
+##### when running docker network inspect cdb-net now, you should see the 2 services docker containers have been added in the same network:
 ![image](https://user-images.githubusercontent.com/112602900/217963447-46e7713d-9352-48ad-8d4a-06d10df4b7a4.png)
 
 #### 11 . Verify Docker containers can communicate
