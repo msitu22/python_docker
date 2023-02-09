@@ -58,12 +58,12 @@ docker network create cdb-net
 ![image](https://user-images.githubusercontent.com/112602900/217963264-fc51dd95-09b0-4828-8784-51c92005b6bc.png)
 
 ## Connect 2 Microservices:
-#### 9 . Add Docker service 1 Container in the Docker Network cdb-net and run the container:
+#### 9 . Add Docker service 1 Container to the Docker Network cdb-net and run the container:
 `
 cd sv1
 docker run -p 5000:5000 --network=cdb-net --name container python-docker
 `
-#### 10 . Add Docker service 2 Container in the Docker Network cdb-net and run the container:
+#### 10 . Add Docker service 2 Container to the Docker Network cdb-net and run the container:
 `
 cd sv2
 docker run -p 3000:3000 --network=cdb-net --name container2 python-docker-2 
