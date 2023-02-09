@@ -37,7 +37,7 @@ pip install Flask
 `
 
 #### The service 1 will run on port 5000, and the service 2 will run on port 3000.
-#### 6 .Build Docker image for serivce 1 with its Dockerfile:
+##### 6 .Build Docker image for serivce 1 with its Dockerfile:
 `
 cd sv1
 docker build -t python-docker .
