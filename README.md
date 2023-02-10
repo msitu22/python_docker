@@ -36,7 +36,7 @@ venv\Scripts\activate
 pip install Flask
 `
 
-##### The service 1 will run on port 5000, and the service 2 will run on port 3000.
+##### The service 1(city to zipcode) will run on port 5000, and the service 2(zipcode to weather) will run on port 3000.
 #### 6 .Build Docker image named python-docker as for serivce 1 with its Dockerfile:
 `
 cd sv1
@@ -81,9 +81,9 @@ docker run -p 3000:3000 --network=cdb-net --name container2 python-docker-2
 `
 curl http://127.0.0.01:5000/Sunnyvale
 `
-##### when you type in city name(ex:Sunnyvale) after 5000/, you will the below result:
+##### when you type in city name(ex:Sunnyvale) after 5000/, you will the weather result of Sunnyvale came out as below:
 ![image](https://user-images.githubusercontent.com/112602900/217963677-39d5cdac-a4cb-49b3-905f-4940d98f8199.png)
 
-##### Testing on the browser, when you type in city name(ex:New York) after 5000/, you will the below result:
+##### Testing on the browser, when you type in city name(ex:New York) after 5000/, you will the weather result of Mew York came out as below:
 ![image](https://user-images.githubusercontent.com/112602900/217964717-b69aafab-e0b3-4fe6-a6bb-f8dca09480b0.png)
 
