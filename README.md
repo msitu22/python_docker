@@ -37,33 +37,39 @@ pip install Flask
 `
 
 ##### The service 1 will run on port 5000, and the service 2 will run on port 3000.
-#### 6 .Build Docker image for serivce 1 with its Dockerfile:
+#### 6 .Build Docker image named python-docker as for serivce 1 with its Dockerfile:
 `
 cd sv1
 docker build -t python-docker .
 `
-#### 7 .Build Docker image for serivce 2 with its Dockerfile:
+#### 7 .Build Docker image named python-docker-2 for serivce 2 with its Dockerfile:
 `
 cd sv2
 docker build -t python-docker-2 .
 `
 ##### when running docker images you should see the two images:
+`
+docker images
+`
 ![image](https://user-images.githubusercontent.com/112602900/217962562-82f0a436-805f-455b-b39a-fe5ae1480fc8.png)
 
-#### 8 . Setup Docker Network:
+#### 8 . Setup a new Docker Network bridge named as cdb-net:
 `
 docker network create cdb-net
 `
 ##### when running docker network inspect cdb-net you should see below:
+`
+docker network inspect cdb-net
+`
 ![image](https://user-images.githubusercontent.com/112602900/217963264-fc51dd95-09b0-4828-8784-51c92005b6bc.png)
 
 ## Connect 2 Microservices:
-#### 9 . Add Docker service 1 Container to the Docker Network cdb-net and run the container:
+#### 9 . Add Docker service 1 Container named as container to the Docker Network cdb-net and run the container:
 `
 cd sv1
 docker run -p 5000:5000 --network=cdb-net --name container python-docker
 `
-#### 10 . Add Docker service 2 Container to the Docker Network cdb-net and run the container:
+#### 10 . Add Docker service 2 Container named as container2 to the Docker Network cdb-net and run the container:
 `
 cd sv2
 docker run -p 3000:3000 --network=cdb-net --name container2 python-docker-2 
